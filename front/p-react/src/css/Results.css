@@ -1,0 +1,119 @@
+ .results{
+    max-width:-webkit-fill-available;
+    /* background: linear-gradient(180deg, var(--light-grey) 20%, var(--purple) 20%) #5AC8DD; */
+    background: linear-gradient(240deg, var(--blue) 6%, rgba(0,0,0,0) 6%), linear-gradient(180deg, var(--light-grey) 0%, var(--purple) 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+ }
+
+ .results-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: min-content;
+    grid-column-gap: 3em;
+    grid-row-gap: 5em;
+    max-width: fit-content;
+    margin-bottom: 5em;
+ }
+
+.card{
+    position: relative;
+    max-width: 16em;
+    height: 17em;
+    background-color: white;
+    border-radius: 30px;
+    color: var(--purple);
+    transform: translateY(-100px);
+}
+
+.content>div{
+    margin: 0;
+    transform: translateY(-90px);
+}
+
+#status{
+    height: 2.7em;
+    transform: translateY(-50px);
+    float: right;
+    margin-right: 1em;
+}
+
+.content>div>span{
+    background-color: var(--pink);
+    max-width: max-content;
+    font-size: 24px;
+    padding: 0.1em 1.5em 0.1em 1em;
+    color: white;
+}
+
+#logo{
+    height: 12em;
+    transform: translateY(-30px);
+    padding: 0em 2em 2em 2em;
+    cursor: pointer;
+}
+
+#info-content{
+ display: flex;
+ justify-content: space-between;
+ width: 90%;
+ align-items: center;
+}
+
+#info-content-left{
+    max-width: 90%;
+}
+
+#info-content-left>h4{
+    font-size: x-large;
+    margin: 0;
+    padding-left: 2rem;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+#info-content>div>h6{
+    font-size: medium;
+    margin: 0;
+    padding-left: 2rem;
+    
+}
+
+#info-content>div>img{
+    height: 3em;
+}
+
+/*Responsividade*/
+
+
+
+@media screen and (max-width: 550px){
+    .results-box {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 0;
+        transform: translateY(-20%) scale(0.55);
+    }
+
+}
+
+@media screen and (max-width: 900px) and (min-width: 550px){
+    .results-box {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 5em;
+    }
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1250px){
+    .results-box {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+
+  @media screen and (min-width: 1600px) {
+    .results-box {
+        grid-template-columns: repeat(5, 1fr);
+    }
+  }

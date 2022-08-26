@@ -1,0 +1,328 @@
+/*Search Box*/
+
+
+.search-box{
+    background-color: var(--purple);
+    padding: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 20px;
+    max-width: -webkit-fill-available;
+    margin-bottom: 15em;
+}
+
+/*Checkbox*/
+#checkbox-line>div{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+#checkbox-line>div>label{
+    font-size: x-large;
+    margin-right: 1em;
+ }
+
+#checkbox-line>div>input[type="radio"]{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--purple);
+    margin: 0;
+    font: inherit;
+    width: 2.4em;
+    height: 2.4em;
+    border: 0.30em solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+#checkbox-line>div>input[type="radio"]:checked{
+    box-shadow: inset 0.40em 0.40em var(--pink);
+    border: 0.15em solid var(--pink);
+    transform: scale(1);
+  }
+/*Checkbox*/
+
+
+/*Select*/
+
+
+#select-line{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 3em;
+    gap: 2rem;
+}
+
+#select-area{
+    display: flex;
+    flex-direction: column;
+}
+
+#select-line>div>label{
+    font-size: medium;
+    text-align: left;
+    padding: 0 0 0.8em 0em;
+}
+
+#select-line>div>select{
+    appearance: none;
+    border: solid white 2px;
+    outline: 0;
+    font: inherit;
+    width: 20em;
+    height: 4em;
+    padding: 0 4em 0 1em;
+    background: url('../assets/select-box.png') no-repeat right 0.8em center / 1.4em;
+    color: white;
+    border-radius: 0.40em;
+    cursor: pointer;
+}
+
+#select-line>div>select>option{
+ background-color: var(--light-grey);
+ color: var(--pink);
+}
+
+
+#input-data-area{
+    display: flex;
+    flex-direction: column;
+}
+
+#input-data-area-label{
+    font-size: medium;
+    text-align: left;
+    padding: 0 0 0.8em 0em;
+}
+
+#input-data-area-box>input{
+    height: 4em;
+    width: 6em;
+    padding: 0 4em 0.5em 1em;
+    outline: 0;
+    background-color: transparent;
+    color: white;
+    display: inline-block 
+}
+
+#data-from{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    border-right: none;
+    border-radius: 0.4em 0em 0em 0.4em;
+}
+
+#data-to{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-left: 1px solid white;
+    border-radius: 0em 0.4em 0.4em 0em;
+}
+
+::-webkit-calendar-picker-indicator{
+    float: left;
+}
+
+
+/*Select*/
+
+/*Plataforms*/
+#plataform-line{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 3.5rem 0 0 0;
+    overflow-y: hidden;
+    flex-wrap: wrap;
+}
+
+.plataform-line-left{
+    display: flex;
+    align-items: row;
+    gap: 1.5rem;
+}
+
+.plataform-line-left>span{
+    font-weight: lighter;
+    font-size: small;
+    align-self: center;
+}
+
+.plataform-line-left>label{ 
+  display: block;
+  position: relative;
+  margin: 10px;
+}
+
+.checkbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+}
+
+.icon{
+  width: 3em;
+  height: 3em;
+  background: black;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 5px solid transparent;
+}
+
+.icon>img{
+    height: 3em;
+}
+
+.checkbox:checked ~ .icon {
+    background-color: var(--pink);
+  }
+  
+
+.plataform-line-right{
+    display: flex;
+    justify-content: end;
+}
+
+.plataform-line-right>button{
+    width: 13em;
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+.selected-podcast{
+    background-color: var(--pink);
+    border: 5px solid var(--pink);
+    border-radius: 10px;
+  }
+
+
+/*Plataforms*/
+
+/*Responsividade*/
+
+@media screen and (max-width: 900px){
+    .search-box{
+        margin-bottom: 8em
+        }
+}
+
+@media screen and (max-width: 360px){
+    #checkbox-line{
+        display: flex;
+        flex-direction: column;
+        line-height: 3em;
+        justify-content: center;
+        font-size: small;
+    }
+
+    #checkbox-line>div>label {
+        font-size: larger;
+    }
+
+    #checkbox-line>div>input[type="radio"] {
+        width: 2em;
+        height: 2em;
+    }
+
+    #select-line{
+        justify-content: center;
+    }
+
+    #select-line>div>select {
+        width: 15em;
+        height: 3em;
+    }
+
+    #input-data-area-box {
+        display: flex;
+    }
+
+    #input-data-area-box>input {
+        width: 4em;
+        height: 3em;
+    }
+
+    #plataform-line {
+        display: flex;
+        overflow-y: unset;
+    }
+
+    .plataform-line-left {
+        overflow-y: hidden;
+        margin: 0 0em 0 0;
+        gap: 1.1em;
+    }
+
+    .plataform-line-right>button {
+        width: 7em;
+        font-weight: lighter;
+        font-size: medium;
+        margin-top: 2em;
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width: 1250px) and (min-width: 361px) {
+
+    #checkbox-line{
+        display: flex;
+        flex-direction: column;
+        line-height: 3em;
+    }
+
+        #checkbox-line>div>label {
+            font-size: larger;
+        }
+
+        #checkbox-line>div>input[type="radio"] {
+            width: 2em;
+            height: 2em;
+        }
+
+        #select-line{
+            justify-content: normal;
+        }
+
+        #select-line>div>select {
+            width: 15em;
+        }
+
+        #input-data-area-box {
+            display: flex;
+        }
+
+        #input-data-area-box>input {
+            width: 4em;
+        }
+
+        #plataform-line {
+            display: flex;
+            overflow-y: unset;
+        }
+
+        .plataform-line-left {
+            overflow-y: hidden;
+            margin: 0 0em 0 0;
+            gap: 1.1em;
+        }
+    
+        .plataform-line-right>button {
+            width: 7em;
+            font-weight: lighter;
+            font-size: medium;
+            margin-top: 2em;
+            padding: 1em;
+        }
+
+  }
