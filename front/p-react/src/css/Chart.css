@@ -1,0 +1,328 @@
+.Overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.397);
+    z-index: 2;
+}
+
+.ModalCharts{
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    background-color: var(--light-grey);
+    width: 60%;
+    margin: 0 auto;
+    outline: none;
+    margin-top: 2%;
+    margin-bottom: 6%;
+    color: var(--purple);
+}
+
+#container-modal-charts{
+    padding: 5%;
+    background-image: url('../assets/fundo.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    /* background: linear-gradient(90deg, var(--pink) 25%, rgba(0,0,0,0) 6%); */
+}
+
+#row1{
+display: inline-flex;
+align-items: center;
+margin-bottom: 6%;
+gap: 3em;
+}
+
+#row1>img{
+    height: 16em;
+}
+
+#row-1-content{
+    line-height: 1em;
+}
+
+#row-1-content>div{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+#row-1-content>div>img{
+    height: 2em;
+}
+
+#row-1-content>p>span{
+    color: var(--pink);
+    font-weight: 800;
+}
+
+#row2{
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+#row2>span{
+    font-size: 4vh;
+    font-weight: bold;
+    color: white;
+    margin-right: 2%;
+}
+
+#row2>div{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+#row2>div>h3{
+    font-size: 1vh;
+}
+
+#row2>div>h5{
+    border: 2px solid var(--purple);
+    padding: 05px;
+    font-weight: lighter;
+    font-size: 0.7vh;
+    border-radius: 20px;
+}
+
+#SpotifyLink{
+    height: 2.5em;
+}
+
+
+#row2>button{
+    padding: 1em;
+    height: 2.5em;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#row2>button>img{
+    margin-left: 5%;
+    height: 1em;
+}
+
+
+#grafico{
+    background-color: white;
+    height: calc(100% - 1em);
+}
+
+/*Responsividade*/
+
+/* @media screen and (min-width: 2400px) {
+    .ModalCharts{
+        width: 46%;
+    }
+
+    #row1{
+        font-size: x-large;
+    }
+
+    #row1>img{
+        height: 12em;
+    }
+
+    #row2>div{
+        gap: 2em;
+    }
+
+    #row2>div>h3{
+        font-size: 1.5vh;
+    }
+
+    #SpotifyLink{
+        height: 8em;
+    }
+
+} */
+
+@media screen and (min-width: 1400px)  {
+
+    
+    #row1>img{
+        height: 12em;
+    }
+
+    #row1{
+        font-size: larger;
+    }
+
+    #row2{
+        margin-top: 0;
+    }
+
+    #row2>div{
+       gap: 3em;
+    }
+
+    #row2>span{
+        font-size: 4em;
+    }
+
+    #row2>div>h3{
+        font-size: 2vh;
+    }
+
+    #SpotifyLink{
+        height: 3em;
+    }
+
+    #row2>div>h5{
+        font-size: 1.5vh;
+    }
+
+    #row2>button{
+        margin-top: 5%;
+        width: 20%;
+        font-size: 1.4vh;
+    }
+
+}
+
+@media screen and (max-width: 1400px) and (min-width: 900px){
+    #row1>img{
+        height: 12.5em;
+    }
+
+    #row1{
+        font-size: small;
+        gap: 2em;
+    }
+
+    #row-1-content{
+        max-width: 65%;
+    }
+
+    #row2>span{
+        font-size: 3em;
+    }
+
+    #row2>div>h3{
+        font-size: 2vh;
+    }
+
+    #SpotifyLink{
+        height: 3em;
+    }
+
+    #row2>div>h5{
+        font-size: 1.5vh;
+    }
+
+    #row2>button{
+        margin-top: 5%;
+        width: 40%;
+        font-size: 1.4vh;
+        background-color: var(--purple);
+    }
+    
+    
+}
+
+@media screen and (max-width: 900px) and (min-width:520px) {
+    #row1>img{
+        height: 13em;
+        align-items: center;
+    }
+
+    #row1{
+        font-size: xx-small;
+        gap: 2em;
+        /* display: inline; */
+        flex-wrap: wrap;
+    }
+
+    #row-1-content>p>span{
+        color: black;
+    }
+
+    #row-1-content{
+        max-width: 100%;
+    }
+
+    #row-1-content>p>div{
+        flex-wrap: wrap;
+    }
+
+    #row2>div>h3{
+        font-size: 1.6vh;
+    }
+
+    #SpotifyLink{
+        height: 2em;
+    }
+
+    #row2>button{
+        margin-top: 5%;
+        width: 50%;
+        font-size: 1.4vh;
+        background-color: var(--purple);
+    }
+}
+
+
+@media screen and (max-width: 520px) {
+    .ModalCharts{
+        width: 80%;
+        margin-top: 10%;
+        height: 85%;
+    }
+
+    #container-modal-charts{
+        background: linear-gradient(180deg, var(--pink) 15%, rgba(0,0,0,0) 15%);
+    }
+
+    #row1>img{
+        height: 11em;
+    }
+
+    #row1{
+        font-size: xx-small;
+        display: unset;
+    }
+
+    #row-1-content{
+        max-width: 100%;
+    }
+
+    #row-1-content>div{
+        max-width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    #myChart{
+        height: 100px;
+    }
+
+    #row2{
+        margin-top: 4%;
+    }
+
+    #row2>span{
+        color: var(--pink);
+    }
+
+    #SpotifyLink{
+        height: 1.5em;
+    }
+
+    #row2>button{
+        width: 50%;
+        height: 0.5em;
+        font-size: 1.3vh;
+        margin-top: 4%;
+    }
+
+}
