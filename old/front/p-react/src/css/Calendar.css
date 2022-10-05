@@ -1,0 +1,30 @@
+#calendar-area>input{
+    outline: none;
+    background-color: transparent;
+    color: white;
+    border: 2px white solid;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+#calendar-area>input{
+    margin-top: 1em;
+    display: none;
+   width: 18em;
+   
+}
+
+#calendar-area>label{
+font-size: 1.7em;
+cursor: pointer;
+margin-right: 0.8em;
+}
+
+.selectedCalendar{
+    font-size: 1.7em;
+    cursor: pointer;
+    margin-right: 0.8em;
+    border-bottom: 2px solid var(--pink);
+    font-weight: 600;
+}
+    
